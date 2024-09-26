@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<th:block th:fragment="name-admin">
+    <!-- sidebar logo -->
+    <a href="index.html" class="sidebar__logo">
+        <img th:src="@{/user/images/demos/demo-6/logo-footer.png}" alt="Molla Logo" width="82" height="25">
+    </a>
+    <!-- end sidebar logo -->
+
+    <!-- sidebar user -->
+    <div class="sidebar__user">
+
+
+        <div class="sidebar__user-title">
+            <span>Admin</span>
+            <p th:text="${session.data_user.fullname}"></p>
+        </div>
+
+        <a th:href="@{/login-register/logout}" class="sidebar__user-btn">
+            <i class="ti ti-logout"></i>
+        </a>
+    </div>
+</th:block>
+</body>
+</html>
